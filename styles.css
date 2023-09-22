@@ -1,0 +1,108 @@
+/* Reset some default styles */
+html {
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #1a1a1a;
+}
+
+h1 {
+    justify-content: center;
+    padding: 1rem 2rem 1rem 2rem;
+    margin: 0;
+    color: #e1e1e1;
+}
+
+/* Create a flex container for layout */
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch; /* Stretch both columns to the same height */
+    padding: 2rem;
+}
+
+/* Style the left side (form) */
+#calc-form {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 45%;
+    padding: 0.5rem;
+    background-color: #e1e1e1;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Style labels and inputs within the form */
+#calc-form label {
+    margin-bottom: 0.5rem;
+}
+
+#calc-form fieldset label, 
+#calc-form fieldset  {
+    margin: 0;
+    padding-bottom: 0;
+}
+
+#calc-form input,
+#calc-form fieldset {
+    margin-bottom: 1rem;
+    border-radius: 3px;
+    border-width: 1px;
+
+}
+
+#calc-form fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+#calc-form button {
+    background-color: #003e80;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+#calc-form button:hover {
+    background-color: #102133;
+}
+
+#calc-form p {
+    margin: 0.1rem 0 0.1rem 0
+}
+
+/* Style the right side (image) */
+#image {
+    width: 50%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+#result {
+    display: block
+}
+
+#result p {
+    margin-top: 0.5rem;
+}
+
+/* Responsive layout for smaller screens */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #calc-form, #image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+

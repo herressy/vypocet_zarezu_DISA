@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Výpočet plochy zárezu</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Výpočet plochy zárezu pre odliatok podľa manuálu pre DISA 2013 MK5</h1>
+    <main>
+        <form id="calc-form">
+            <label for="weight-input">Hmotnosť odliatku a náliatku v kg:</label>
+            <input type="text" id="weight-input" name="weight" required>
+
+            <label for="time-input">Celkový čas liatia v sek.:</label>
+            <input type="text" id="time-input" name="time" required>
+
+            <fieldset>
+                <legend>Plnenie:</legend>
+                <label>
+                    <input type="radio" name="gating-system" value="bottom" checked>
+                    Zospodu
+                </label>
+                <label>
+                    <input type="radio" name="gating-system" value="side">
+                    Zboku
+                </label>
+            </fieldset>
+
+            <label for="height-input">Výška (a) od zárezu po vrch formy v mm:</label>
+            <input type="text" id="height-input" name="height" required>
+
+            <label for="b-input">Výška (b) od zárezu k vrchu odliatku (a náliatku) v mm:</label>
+            <input type="text" id="b-input" name="b" required>
+
+            <label for="c-input">Výška (c) odliatku (s náliatkom) v mm:</label>
+            <input type="text" id="c-input" name="c" required>
+
+            <label for="m-input">Stratový faktor (m):</label>
+            <input type="text" id="m-input" name="m" value="0.3" required>
+
+            <fieldset>
+                <legend>Pomer zárez : lapač: kanál:</legend>
+                <label>
+                    <input type="radio" name="ratio" value="1" checked>
+                    1 : 1,2 : 1,4
+                </label>
+                <label>
+                    <input type="radio" name="ratio" value="2">
+                    1 : 1,5 : 2
+                </label>
+            </fieldset>
+            <button type="button" id="calculate-button">Výpočet</button>
+            <div id="result"></div>
+        </form>
+        <img src="IMG_DISA.jpg" alt="Image Placeholder" id="image">
+
+        <script src="script.js"></script>
+    </main>
+</body>
+</html>
